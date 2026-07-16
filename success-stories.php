@@ -1,0 +1,10 @@
+<?php
+require_once __DIR__ . '/includes/config.php';
+$meta = page_meta(['title' => 'Yoga Teacher Success Stories | Yoga Prosperity Model', 'description' => 'Read stories from yoga teachers who gained clarity, confidence and stronger positioning through Yoga Prosperity Model.', 'path' => '/success-stories/']);
+$structuredData = [breadcrumb_schema([['Home', '/'], ['Success Stories', '/success-stories/']])];
+require __DIR__ . '/includes/header.php';
+?>
+<section class="page-hero"><div><p class="breadcrumbs"><a href="/">Home</a> / Success Stories</p><h1>Real progress.<br><em>Real people.</em></h1></div><p>Stories of yoga teachers turning their experience into clearer programs, stronger positioning and purposeful growth.</p></section>
+<section class="stories section"><div class="stories-title"><p class="eyebrow">Member experiences</p><h2>Confidence changes <em>everything.</em></h2></div><div class="story-stack"><blockquote><span>01</span><p>“I went from struggling to find clients to securing my first premium client within two months. The structure gave me clarity and confidence.”</p><footer>Shruti Deshpande<small>Yoga teacher</small></footer></blockquote><blockquote><span>02</span><p>“I stopped undervaluing my work, built a focused program and began attracting students who genuinely value my expertise.”</p><footer>Arvind Patel<small>Yoga teacher</small></footer></blockquote><blockquote><span>03</span><p>“Within three months, I signed two premium clients and gained a clearer path for growing while doing the work I love.”</p><footer>Kavita Nair<small>Yoga teacher</small></footer></blockquote><blockquote><span>04</span><p>“I learned how to design a transformational program that resonates with my audience and finally feel valued as a teacher.”</p><footer>Ramesh Iyer<small>Yoga teacher</small></footer></blockquote></div></section>
+<section class="cta-band"><h2>Your story can<br>begin here.</h2><a class="button" href="/contact.php">Talk to the team <span>↗</span></a></section>
+<?php require __DIR__ . '/includes/footer.php'; ?>

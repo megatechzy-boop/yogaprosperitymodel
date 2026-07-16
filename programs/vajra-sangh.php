@@ -1,0 +1,4 @@
+<?php
+require_once dirname(__DIR__) . '/includes/config.php';
+$program = ['name' => 'Vajra Sangh', 'slug' => 'vajra-sangh', 'level' => 'Mentorship at depth.', 'price' => '₹99,999', 'description' => 'The highest level of mentorship for established yoga teachers building a differentiated program, retreat or long-term body of work.', 'intro' => 'Vajra Sangh combines the full community pathway with individual guidance and deeper collaborative development.', 'features' => [['Everything in Suvarn', 'Access the complete learning and premium community ecosystem.'], ['One-to-one coaching', 'Receive focused support for your business, program and decisions.'], ['Retreat collaboration', 'Develop a purposeful retreat concept and experience.'], ['Certification pathway', 'Follow a longer-term three-year development and recognition path.']]];
+require dirname(__DIR__) . '/includes/program-page.php';

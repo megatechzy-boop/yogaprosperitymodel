@@ -1,0 +1,4 @@
+<?php
+require_once dirname(__DIR__) . '/includes/config.php';
+$program = ['name' => 'Rajat Sangh', 'slug' => 'rajat-sangh', 'level' => 'Build the foundation.', 'price' => '₹6,999', 'description' => 'A guided one-year foundation for yoga teachers ready to clarify their offer, learn the business essentials and implement with community support.', 'intro' => 'Rajat Sangh brings practical learning and consistent action together so you can start building your yoga career with greater clarity.', 'features' => [['12 practical courses', 'Build capability across positioning, program design, marketing and enrolment.'], ['30-day hackathon', 'Move from ideas to implementation through focused challenges.'], ['Weekly Q&A', 'Bring questions, remove blockers and keep making progress.'], ['Accountability community', 'Learn alongside yoga teachers committed to responsible growth.']]];
+require dirname(__DIR__) . '/includes/program-page.php';

@@ -1,0 +1,23 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^about/?$ about.php [L]
+RewriteRule ^yoga-prosperity-method/?$ yoga-prosperity-method.php [L]
+RewriteRule ^programs/?$ programs.php [L]
+RewriteRule ^programs/(rajat-sangh|suvarn-sangh|vajra-sangh)/?$ programs/$1.php [L]
+RewriteRule ^success-stories/?$ success-stories.php [L]
+RewriteRule ^resources/?$ blog.php [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^privacy-policy/?$ privacy-policy.php [L]
+RewriteRule ^terms-and-conditions/?$ terms.php [L]
+RewriteRule ^refund-policy/?$ refund-policy.php [L]
+RewriteRule ^pricing-policy/?$ pricing-policy.php [L]
+
+ErrorDocument 404 /404.php

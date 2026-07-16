@@ -1,0 +1,4 @@
+<?php
+require_once __DIR__ . '/includes/config.php';
+$legal = ['title' => 'Pricing Policy', 'path' => '/pricing-policy/', 'description' => 'How program prices and payment information are presented by Yoga Prosperity Model.', 'sections' => [['Published prices', ['The website currently presents Rajat Sangh at ₹6,999 per year, Suvarn Sangh at ₹14,999 per year and Vajra Sangh at ₹99,999 per year. Final inclusions and applicable taxes will be confirmed before payment.']], ['Changes and offers', ['Program prices, promotional offers and availability may change. The price shown in the confirmed enrolment communication or future Razorpay checkout will govern the transaction.']], ['Transparency', ['Any taxes, instalment conditions or additional charges will be stated before the customer completes payment.']]]];
+require __DIR__ . '/includes/legal-page.php';
