@@ -2,9 +2,16 @@
 declare(strict_types=1);
 
 const SITE_NAME = 'Yoga Prosperity Model';
-const SITE_URL = 'https://yogaprosperitymodel.com';
+const SITE_ORIGIN = 'https://megatechzy.com';
+define('SITE_BASE_PATH', preg_match('#^/yogaprosperitymodel(?:/|$)#', (string) ($_SERVER['SCRIPT_NAME'] ?? '')) ? '/yogaprosperitymodel' : '');
+define('SITE_URL', SITE_ORIGIN . SITE_BASE_PATH);
 const SUPPORT_EMAIL = 'support@yogaprosperitymodel.com';
 const SUPPORT_PHONE = '+91 74200 87709';
+
+function site_path(string $path = ''): string
+{
+    return SITE_BASE_PATH . '/' . ltrim($path, '/');
+}
 
 function page_meta(array $overrides = []): array
 {

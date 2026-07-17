@@ -20,4 +20,4 @@ RewriteRule ^terms-and-conditions/?$ terms.php [L]
 RewriteRule ^refund-policy/?$ refund-policy.php [L]
 RewriteRule ^pricing-policy/?$ pricing-policy.php [L]
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /yogaprosperitymodel/404.php

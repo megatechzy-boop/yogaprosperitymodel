@@ -29,8 +29,8 @@ require __DIR__ . '/includes/header.php';
   </div>
   <div class="hero-visual">
     <div class="hero-word" aria-hidden="true">PROSPER</div>
-    <div class="hero-photo-wrap"><img src="/assets/images/yoga-student.jpg" alt="Confident yoga teacher in a bright studio" width="1500" height="1000"></div>
-    <div class="mentor-card"><img src="/assets/images/founder.png" alt="Rajyogi Prabhu Zunja" width="472" height="528"><div><span>Your mentor</span><strong>Rajyogi<br>Prabhu Zunja</strong></div></div>
+    <div class="hero-photo-wrap"><img src="<?= e(asset_url('images/yoga-student.jpg')) ?>" alt="Confident yoga teacher in a bright studio" width="1500" height="1000"></div>
+    <div class="mentor-card"><img src="<?= e(asset_url('images/founder.png')) ?>" alt="Rajyogi Prabhu Zunja" width="472" height="528"><div><span>Your mentor</span><strong>Rajyogi<br>Prabhu Zunja</strong></div></div>
     <div class="impact-card"><span>Community impact</span><strong>2,000+</strong><small>people empowered through yoga</small></div>
     <div class="orbit-badge"><span>Purpose</span><b>✦</b><span>Prosperity</span></div>
   </div>
@@ -54,7 +54,7 @@ require __DIR__ . '/includes/header.php';
 </section>
 
 <section class="about section">
-  <div class="about-image"><img src="/assets/images/yoga-student.jpg" alt="Yoga teacher practising in a bright studio" width="1500" height="1000" loading="lazy"><span>Yoga + entrepreneurship</span></div>
+  <div class="about-image"><img src="<?= e(asset_url('images/yoga-student.jpg')) ?>" alt="Yoga teacher practising in a bright studio" width="1500" height="1000" loading="lazy"><span>Yoga + entrepreneurship</span></div>
   <div class="about-copy"><p class="eyebrow">Meet your mentor</p><h2>A teacher who understands <em>both sides.</em></h2><p>Prabhu Zunja is a yoga teacher, mentor and entrepreneur who blends traditional Patanjali Yoga with modern business strategy. His work has reached learners across India and internationally.</p><p>Through the Yoga Prosperity Model, he helps teachers create a sustainable career while expanding their impact—physically, mentally, emotionally and spiritually.</p><div class="credentials"><div><strong>2,000+</strong><span>people trained</span></div><div><strong>5</strong><span>countries reached</span></div><div><strong>1</strong><span>prosperous mission</span></div></div><a class="button dark" href="/about.php">Know Prabhu's story <span>→</span></a></div>
 </section>
 
