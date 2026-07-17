@@ -25,6 +25,7 @@ $canonical = SITE_URL . $meta['path'];
   <meta name="theme-color" content="#09061c">
   <meta name="author" content="Prabhu Zunja">
   <link rel="icon" type="image/png" sizes="512x512" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
+  <link rel="shortcut icon" type="image/png" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
   <link rel="apple-touch-icon" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
