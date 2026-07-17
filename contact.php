@@ -24,7 +24,7 @@ require __DIR__ . '/includes/header.php';
     <p class="eyebrow">Contact details</p>
     <h2>We are here to help.</h2>
     <div class="contact-details">
-      <a href="tel:+917420087709">+91 74200 87709</a>
+      <a href="tel:+917756857108">+91 77568 57108</a>
       <a href="mailto:support@yogaprosperitymodel.com">support@yogaprosperitymodel.com</a>
       <p>Ravet, Pune - 412101</p>
     </div>
@@ -35,7 +35,7 @@ require __DIR__ . '/includes/header.php';
     <label class="honeypot">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
     <label>Name<input type="text" name="name" value="<?= e($name) ?>" placeholder="Your full name" required maxlength="80"></label>
     <label>Email<input type="email" name="email" value="<?= e($email) ?>" placeholder="you@example.com" required maxlength="120"></label>
-    <label>Phone<input type="tel" name="phone" value="<?= e($phone) ?>" placeholder="+91 74200 87709" required maxlength="20" pattern="[0-9+\s]{7,20}"></label>
+    <label>Phone<input type="tel" name="phone" value="<?= e($phone) ?>" placeholder="+91 77568 57108" required maxlength="20" pattern="[0-9+\s]{7,20}"></label>
     <label>Program of interest
       <select name="program">
         <option value="Clarity call">15-minute clarity call</option>
