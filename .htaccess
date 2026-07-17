@@ -8,6 +8,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^programs/suvarn-sangh(?:\.php)?/?$ /yogaprosperitymodel/programs/ [R=301,L]
 RewriteRule ^index/?$ index.php [L]
 RewriteRule ^about/?$ about.php [L]
 RewriteRule ^yoga-prosperity-method/?$ yoga-prosperity-method.php [L]

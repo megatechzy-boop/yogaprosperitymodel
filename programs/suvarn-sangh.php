@@ -1,4 +1,0 @@
-<?php
-require_once dirname(__DIR__) . '/includes/config.php';
-$program = ['name' => 'Suvarn Sangh', 'slug' => 'suvarn-sangh', 'level' => 'Accelerate your growth.', 'price' => '₹14,999', 'description' => 'A premium one-year community for yoga teachers ready for advanced strategy, stronger implementation and closer support.', 'intro' => 'Suvarn Sangh is designed for teachers who already have a foundation and want to strengthen their positioning, delivery and growth systems.', 'features' => [['Rajat foundation', 'Receive the core learning and implementation support included in Rajat Sangh.'], ['Advanced sessions', 'Go deeper into growth strategy, messaging and program development.'], ['Premium community', 'Connect with committed teachers at a similar stage of progress.'], ['Implementation guidance', 'Turn advanced ideas into focused weekly action.']]];
-require dirname(__DIR__) . '/includes/program-page.php';

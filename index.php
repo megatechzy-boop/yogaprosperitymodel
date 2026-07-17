@@ -62,8 +62,7 @@ require __DIR__ . '/includes/header.php';
   <div class="section-heading split-title"><div><p class="eyebrow">Choose your growth path</p><h2>From first step to<br><em>full transformation.</em></h2></div><p>Every path combines learning, implementation and community. Choose the level of guidance that matches where you are today.</p></div>
   <div class="plan-grid">
     <article class="plan-card blue"><p>Silver membership</p><h3>Rajat Sangh</h3><div class="price">₹6,999<small>/ year</small></div><ul><li>12 practical courses</li><li>30-day business hackathon</li><li>Weekly Q&A and support</li><li>Accountability community</li></ul><a href="/programs/rajat-sangh.php">Explore Rajat Sangh <span>↗</span></a></article>
-    <article class="plan-card orange"><p>Gold membership</p><h3>Suvarn Sangh</h3><div class="price">₹14,999<small>/ year</small></div><ul><li>Everything in Rajat Sangh</li><li>Advanced growth sessions</li><li>Premium community access</li><li>Implementation guidance</li></ul><a href="/programs/suvarn-sangh.php">Explore Suvarn Sangh <span>↗</span></a></article>
-    <article class="plan-card dark"><p>Diamond mentorship</p><h3>Vajra Sangh</h3><div class="price">₹99,999<small>/ year</small></div><ul><li>Everything in Suvarn Sangh</li><li>One-to-one coaching</li><li>Collaborative retreat design</li><li>3-year certification path</li></ul><a href="/programs/vajra-sangh.php">Explore Vajra Sangh <span>↗</span></a></article>
+    <article class="plan-card dark"><p>Diamond mentorship</p><h3>Vajra Sangh</h3><div class="price">₹99,999<small>/ year</small></div><ul><li>Everything in Rajat Sangh</li><li>One-to-one coaching</li><li>Collaborative retreat design</li><li>3-year certification path</li></ul><a href="/programs/vajra-sangh.php">Explore Vajra Sangh <span>↗</span></a></article>
   </div>
 </section>
 
