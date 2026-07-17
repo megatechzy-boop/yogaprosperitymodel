@@ -9,6 +9,7 @@
     <div><p class="footer-label">Contact</p><a href="tel:+917420087709"><?= SUPPORT_PHONE ?></a><a href="mailto:<?= SUPPORT_EMAIL ?>"><?= SUPPORT_EMAIL ?></a><p>Ravet, Pune – 412101</p></div>
     <div class="footer-bottom"><span>© <?= date('Y') ?> Yoga Prosperity Model</span><a href="#main-content">Back to top ↑</a></div>
   </footer>
-  <script src="<?= e(asset_url('js/site.js')) ?>?v=1.0.1" defer></script>
+  <a class="whatsapp-float" href="https://wa.me/917420087709?text=Hello%20Yoga%20Prosperity%20Model%2C%20I%20would%20like%20to%20book%20a%20clarity%20call." target="_blank" rel="noopener" aria-label="Chat with Yoga Prosperity Model on WhatsApp">WhatsApp</a>
+  <script src="<?= e(asset_url('js/site.js')) ?>?v=1.0.2" defer></script>
 </body>
 </html>

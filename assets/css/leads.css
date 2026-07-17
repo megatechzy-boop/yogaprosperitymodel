@@ -1,0 +1,6 @@
+.contact-form select{width:100%;border:0;border-bottom:1px solid #aaa;background:transparent;padding:13px 0;font:inherit;outline:none}.contact-form select:focus{border-color:var(--orange)}
+.contact-form .honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{grid-column:1/-1;margin:0;padding:13px 15px;background:#eceae3;border-left:4px solid #7a7880;font-size:14px;text-transform:none!important;letter-spacing:0!important}
+.form-status[data-state="pending"]{background:#fff0ce;border-color:#c88100;color:#704900}.form-status[data-state="success"]{background:#dff5e8;border-color:#16814c;color:#0d5833}.form-status[data-state="error"]{background:#fee2e2;border-color:#c53434;color:#821d1d}
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:80;background:#1fa855;color:#fff!important;padding:15px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(15,91,44,.28);font-size:14px;font-weight:700}.whatsapp-float:hover{background:#117b3c;transform:translateY(-2px)}
+@media(max-width:700px){.contact-form select,.form-status{grid-column:1}.whatsapp-float{right:16px;bottom:16px;padding:14px 18px}}

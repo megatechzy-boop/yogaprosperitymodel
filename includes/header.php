@@ -31,6 +31,7 @@ $canonical = SITE_URL . $meta['path'];
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=1.0.1">
+  <link rel="stylesheet" href="<?= e(asset_url('css/leads.css')) ?>?v=1.0.0">
   <?php foreach (array_merge([base_schema()], $structuredData ?? []) as $schema): ?>
   <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
   <?php endforeach; ?>
