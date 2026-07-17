@@ -13,6 +13,11 @@ function site_path(string $path = ''): string
     return SITE_BASE_PATH . '/' . ltrim($path, '/');
 }
 
+function asset_url(string $path): string
+{
+    return site_path('assets/' . ltrim($path, '/'));
+}
+
 function page_meta(array $overrides = []): array
 {
     return array_merge([
