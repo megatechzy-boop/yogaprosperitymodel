@@ -3,6 +3,20 @@ require_once __DIR__ . '/config.php';
 $meta = $meta ?? page_meta();
 $current = $current ?? '';
 $canonical = SITE_URL . $meta['path'];
+if (session_status() !== PHP_SESSION_ACTIVE && !headers_sent()) {
+    header('Cache-Control: public, max-age=600, stale-while-revalidate=60');
+}
+$pageSchema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    '@id' => $canonical . '#webpage',
+    'url' => $canonical,
+    'name' => $meta['title'],
+    'description' => $meta['description'],
+    'isPartOf' => ['@id' => SITE_URL . '/#website'],
+    'about' => ['@id' => SITE_URL . '/#organization'],
+    'inLanguage' => 'en-IN',
+];
 ?>
 <!doctype html>
 <html lang="en-IN">
@@ -21,27 +35,34 @@ $canonical = SITE_URL . $meta['path'];
   <meta property="og:description" content="<?= e($meta['description']) ?>">
   <meta property="og:url" content="<?= e($canonical) ?>">
   <meta property="og:image" content="<?= SITE_URL . e($meta['image']) ?>">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="<?= e($meta['image_alt'] ?? 'Yoga Prosperity Model') ?>">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#09061c">
+  <meta name="twitter:title" content="<?= e($meta['title']) ?>">
+  <meta name="twitter:description" content="<?= e($meta['description']) ?>">
+  <meta name="twitter:image" content="<?= SITE_URL . e($meta['image']) ?>">
+  <meta name="theme-color" content="#171b18">
   <meta name="author" content="Prabhu Zunja">
-  <link rel="icon" type="image/png" sizes="512x512" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
-  <link rel="shortcut icon" type="image/png" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
-  <link rel="apple-touch-icon" href="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>">
+  <link rel="icon" type="image/png" sizes="512x512" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
+  <link rel="shortcut icon" type="image/png" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
+  <link rel="apple-touch-icon" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=1.0.1">
-  <link rel="stylesheet" href="<?= e(asset_url('css/leads.css')) ?>?v=1.0.0">
-  <?php foreach (array_merge([base_schema()], $structuredData ?? []) as $schema): ?>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=3.4.0">
+  <link rel="stylesheet" href="<?= e(asset_url('css/leads.css')) ?>?v=3.2.0">
+  <?php foreach (array_merge([base_schema()], $current === 'home' ? [] : [$pageSchema], $structuredData ?? []) as $schema): ?>
   <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
   <?php endforeach; ?>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="/contact.php">Book a clarity conversation ↗</a></div>
+  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(site_path('contact')) ?>">Book a clarity conversation ↗</a></div>
   <header class="site-header">
     <a class="brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home">
-      <img class="brand-logo" src="<?= e(asset_url('images/yoga-prosperity-model-logo.png')) ?>" alt="" width="512" height="512">
+      <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-2026.png')) ?>" alt="" width="512" height="512">
       <span>Yoga <b>Prosperity Model</b></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
@@ -52,6 +73,6 @@ $canonical = SITE_URL . $meta['path'];
       <a class="<?= $current === 'about' ? 'active' : '' ?>" href="<?= e(site_path('about')) ?>">About</a>
       <a class="<?= $current === 'blog' ? 'active' : '' ?>" href="<?= e(site_path('resources')) ?>">Resources</a>
     </nav>
-    <a class="header-cta" href="/contact.php">Get in touch <span>↗</span></a>
+    <a class="header-cta" href="<?= e(site_path('contact')) ?>">Get in touch <span>↗</span></a>
   </header>
   <main id="main-content">

@@ -5,7 +5,9 @@ const siteBase = document.querySelector('base')?.getAttribute('href');
 if (siteBase) {
   document.querySelectorAll('a[href^="/"]').forEach((link) => {
     const href = link.getAttribute('href');
-    if (href && !href.startsWith('//')) link.setAttribute('href', siteBase + href.slice(1));
+    if (href && !href.startsWith('//') && !href.startsWith(siteBase)) {
+      link.setAttribute('href', siteBase + href.slice(1));
+    }
   });
 }
 

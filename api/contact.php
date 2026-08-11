@@ -86,11 +86,33 @@ $headers = [
 ];
 $sent = function_exists('mail') && mail(SUPPORT_EMAIL, $subject, $body, implode("\r\n", $headers));
 
-$storageDir = dirname(__DIR__) . '/storage';
-if (!is_dir($storageDir)) {
-    mkdir($storageDir, 0755, true);
+$configuredStorage = trim((string) getenv('YPM_LEAD_STORAGE_DIR'));
+$documentRoot = realpath((string) ($_SERVER['DOCUMENT_ROOT'] ?? '')) ?: dirname(__DIR__);
+$storageDir = $configuredStorage !== ''
+    ? rtrim($configuredStorage, '/\\')
+    : dirname($documentRoot) . DIRECTORY_SEPARATOR . 'ypm-private-data';
+$leadFile = $storageDir . DIRECTORY_SEPARATOR . 'leads.jsonl';
+$stored = false;
+
+if ((is_dir($storageDir) || @mkdir($storageDir, 0700, true)) && is_writable($storageDir)) {
+    $stored = file_put_contents(
+        $leadFile,
+        json_encode($lead, JSON_UNESCAPED_SLASHES) . PHP_EOL,
+        FILE_APPEND | LOCK_EX
+    ) !== false;
+
+    if ($stored && DIRECTORY_SEPARATOR === '/') {
+        @chmod($leadFile, 0600);
+    }
+} else {
+    error_log('Yoga Prosperity Model lead storage is unavailable.');
 }
-file_put_contents($storageDir . '/leads.jsonl', json_encode($lead, JSON_UNESCAPED_SLASHES) . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+if (!$sent && !$stored) {
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'message' => 'We could not receive your enquiry. Please contact us by phone or WhatsApp.']);
+    exit;
+}
 
 echo json_encode([
     'ok' => true,

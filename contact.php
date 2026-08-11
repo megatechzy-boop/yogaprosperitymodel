@@ -6,18 +6,25 @@ $meta = page_meta([
     'description' => 'Contact the Yoga Prosperity Model team to discuss yoga business programs, mentorship and community membership.',
     'path' => '/contact/',
 ]);
-$structuredData = [breadcrumb_schema([['Home', '/'], ['Contact', '/contact/']])];
+$faqs = [
+    ['How quickly will the Yoga Prosperity Model team respond?', 'The team aims to respond within one business day after receiving a complete enquiry.'],
+    ['What happens during the 15-minute clarity call?', 'The conversation covers your current yoga work, goals and preferred level of support so the team can suggest a suitable next step without guaranteeing an outcome.'],
+    ['Where is Yoga Prosperity Model based?', 'Yoga Prosperity Model is based in Ravet, Pune, Maharashtra, India, and its current learning and mentoring offers include online delivery.'],
+];
+$structuredData = [breadcrumb_schema([['Home', '/'], ['Contact', '/contact/']]), faq_schema($faqs)];
 $name = trim((string) ($_GET['name'] ?? ''));
 $email = trim((string) ($_GET['email'] ?? ''));
 $phone = trim((string) ($_GET['phone'] ?? ''));
 $message = trim((string) ($_GET['message'] ?? ''));
 $program = trim((string) ($_GET['program'] ?? ''));
 
+ensure_session();
 require __DIR__ . '/includes/header.php';
 ?>
-<section class="page-hero">
-  <div><p class="breadcrumbs"><a href="/">Home</a> / Contact</p><h1>Start a<br><em>conversation.</em></h1></div>
+<section class="page-hero page-hero-visual">
+  <div><p class="breadcrumbs"><a href="<?= e(site_path()) ?>">Home</a> / Contact</p><h1>Start a<br><em>conversation.</em></h1></div>
   <p>Tell us about your yoga journey and the kind of growth you are working toward. Our team will follow up personally.</p>
+  <div class="page-hero-image focus-right"><img src="<?= e(asset_url('images/trainer-phone-consultation-v1.jpg')) ?>" fetchpriority="high" decoding="async" srcset="<?= e(responsive_srcset('trainer-phone-consultation-v1.jpg')) ?>" sizes="(max-width: 768px) 100vw, 768px" alt="Prabhu Zunja guiding a yoga teacher through a clarity consultation" width="1536" height="1024"><span>Your next step starts here</span></div>
 </section>
 <section class="content-section contact-page">
   <div>
@@ -48,4 +55,5 @@ require __DIR__ . '/includes/header.php';
     <p class="form-status" data-form-status aria-live="polite">We usually respond within one business day.</p>
   </form>
 </section>
+<section class="faq section program-faq"><div><p class="eyebrow">Before you enquire</p><h2>Contact<br><em>questions.</em></h2><p class="faq-intro">What to expect when you reach out to the team.</p></div><div class="accordions"><?php foreach ($faqs as $index => $faq): ?><details <?= $index === 0 ? 'open' : '' ?>><summary><?= e($faq[0]) ?><span>+</span></summary><p><?= e($faq[1]) ?></p></details><?php endforeach; ?></div></section>
 <?php require __DIR__ . '/includes/footer.php'; ?>
