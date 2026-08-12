@@ -87,7 +87,7 @@ $pageSchema = [
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book a clarity conversation ↗</a></div>
+  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(site_path('contact')) ?>">Contact our team ↗</a></div>
   <header class="site-header">
     <a class="brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home">
       <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-96.webp')) ?>" alt="" width="96" height="96">
@@ -100,7 +100,8 @@ $pageSchema = [
       <a class="<?= $current === 'programs' ? 'active' : '' ?>" href="<?= e(site_path('programs')) ?>">Programs</a>
       <a class="<?= $current === 'about' ? 'active' : '' ?>" href="<?= e(site_path('about')) ?>">About</a>
       <a class="<?= $current === 'blog' ? 'active' : '' ?>" href="<?= e(site_path('resources')) ?>">Resources</a>
+      <a class="<?= $current === 'contact' ? 'active' : '' ?>" href="<?= e(site_path('contact')) ?>">Contact</a>
     </nav>
-    <a class="header-cta" href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book a call <span>↗</span></a>
+    <a class="header-cta" href="<?= e(site_path('contact')) ?>">Contact us <span>↗</span></a>
   </header>
   <main id="main-content">

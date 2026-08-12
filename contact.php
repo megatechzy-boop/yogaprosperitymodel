@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/includes/config.php';
+$current = 'contact';
 
 $meta = page_meta([
     'title' => 'Contact Yoga Prosperity Model | Pune',
@@ -35,8 +36,13 @@ require __DIR__ . '/includes/header.php';
       <a href="mailto:support@yogaprosperitymodel.com">support@yogaprosperitymodel.com</a>
       <p>Ravet, Pune - 412101</p>
     </div>
-    <a class="button appointment-button" href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book your appointment <span>↗</span></a>
     <div class="notice">Share your details for a 15-minute clarity call. Our team will personally guide you to the right next step.</div>
+    <aside class="paid-guidance">
+      <p class="eyebrow">Paid one-to-one guidance</p>
+      <h3>Book a focused session with Prabhu.</h3>
+      <p>Complete the payment below. After payment, submit the Google Form and select your preferred call slot.</p>
+      <a class="button appointment-button" href="<?= e(PAID_GUIDANCE_URL) ?>" target="_blank" rel="noopener noreferrer">Book paid guidance <span>↗</span></a>
+    </aside>
   </div>
   <form class="contact-form" data-lead-form action="<?= e(site_path('api/contact.php')) ?>" method="post" novalidate>
     <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">

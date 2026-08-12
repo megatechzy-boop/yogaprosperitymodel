@@ -49,7 +49,7 @@ const SUPPORT_PHONE = '+91 77568 57108';
 const YOUTUBE_URL = 'https://www.youtube.com/@YogaProsperityModel';
 const INSTAGRAM_URL = 'https://www.instagram.com/prabhuzunja/';
 const THREADS_URL = 'https://www.threads.com/@prabhuzunja';
-const APPOINTMENT_URL = 'https://link.yatifunnels.com/widget/bookings/yogaprosperitymodel/appointment';
+const PAID_GUIDANCE_URL = 'https://rzp.io/rzp/RJNjp4uX';
 
 function redirect_legacy_php_request(): void
 {
