@@ -35,6 +35,7 @@ require __DIR__ . '/includes/header.php';
       <a href="mailto:support@yogaprosperitymodel.com">support@yogaprosperitymodel.com</a>
       <p>Ravet, Pune - 412101</p>
     </div>
+    <a class="button appointment-button" href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book your appointment <span>↗</span></a>
     <div class="notice">Share your details for a 15-minute clarity call. Our team will personally guide you to the right next step.</div>
   </div>
   <form class="contact-form" data-lead-form action="<?= e(site_path('api/contact.php')) ?>" method="post" novalidate>
@@ -51,7 +52,7 @@ require __DIR__ . '/includes/header.php';
       </select>
     </label>
     <label>How can we help?<textarea name="message" rows="5" maxlength="1200" placeholder="Tell us about your goals"><?= e($message) ?></textarea></label>
-    <button type="submit">Book your clarity call <span>-&gt;</span></button>
+    <button type="submit">Send your enquiry <span>-&gt;</span></button>
     <p class="form-status" data-form-status aria-live="polite">We usually respond within one business day.</p>
   </form>
 </section>

@@ -1,7 +1,7 @@
   </main>
   <footer class="footer">
     <div>
-      <a class="brand footer-brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home"><img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-160.webp')) ?>" alt="" width="160" height="160"><span>Yoga <b>Prosperity Model</b></span></a>
+      <a class="brand footer-brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home"><img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-96.webp')) ?>" alt="" width="96" height="96"><span>Yoga <b>Prosperity Model</b></span></a>
       <p>Purpose-led business education for yoga teachers.</p>
       <nav class="social-links" aria-label="Social media">
         <a href="<?= e(YOUTUBE_URL) ?>" target="_blank" rel="noopener noreferrer" aria-label="Yoga Prosperity Model on YouTube">YouTube</a>

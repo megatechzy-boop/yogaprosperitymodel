@@ -23,13 +23,27 @@ $pageSchema = [
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQHCJCRZF"></script>
+  <!-- Google Analytics loads after interaction so it does not delay the initial render. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RFQHCJCRZF');
+    (function () {
+      var loaded = false;
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RFQHCJCRZF';
+        document.head.appendChild(script);
+      }
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (eventName) {
+        window.addEventListener(eventName, loadAnalytics, {once: true, passive: true});
+      });
+      window.setTimeout(loadAnalytics, 15000);
+    }());
   </script>
   <base href="<?= e(site_path()) ?>">
   <title><?= e($meta['title']) ?></title>
@@ -58,20 +72,25 @@ $pageSchema = [
   <link rel="apple-touch-icon" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
   <link rel="preload" href="<?= e(asset_url('fonts/inter-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="<?= e(asset_url('fonts/fraunces-latin-normal.woff2')) ?>" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?= e(asset_url('fonts/fraunces-latin-italic.woff2')) ?>" as="font" type="font/woff2" crossorigin>
   <?php if ($current === 'home'): ?>
   <link rel="preload" as="image" href="<?= e(asset_url('images/hero-live-strategy-workshop-v1-768.webp')) ?>" imagesrcset="<?= e(responsive_srcset('hero-live-strategy-workshop-v1.jpg')) ?>" imagesizes="(max-width: 768px) 100vw, 768px" fetchpriority="high">
   <?php endif; ?>
-  <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=3.5.0">
+  <?php
+    $stylesheet = (string) file_get_contents(__DIR__ . '/../assets/css/style.css');
+    $stylesheet = str_replace('../fonts/', asset_url('fonts/'), $stylesheet);
+  ?>
+  <style><?= $stylesheet ?></style>
   <?php foreach (array_merge([base_schema()], $current === 'home' ? [] : [$pageSchema], $structuredData ?? []) as $schema): ?>
   <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
   <?php endforeach; ?>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(site_path('contact')) ?>">Book a clarity conversation ↗</a></div>
+  <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book a clarity conversation ↗</a></div>
   <header class="site-header">
     <a class="brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home">
-      <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-160.webp')) ?>" alt="" width="160" height="160">
+      <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-96.webp')) ?>" alt="" width="96" height="96">
       <span>Yoga <b>Prosperity Model</b></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
@@ -82,6 +101,6 @@ $pageSchema = [
       <a class="<?= $current === 'about' ? 'active' : '' ?>" href="<?= e(site_path('about')) ?>">About</a>
       <a class="<?= $current === 'blog' ? 'active' : '' ?>" href="<?= e(site_path('resources')) ?>">Resources</a>
     </nav>
-    <a class="header-cta" href="<?= e(site_path('contact')) ?>">Get in touch <span>↗</span></a>
+    <a class="header-cta" href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book a call <span>↗</span></a>
   </header>
   <main id="main-content">

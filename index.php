@@ -31,7 +31,7 @@ require __DIR__ . '/includes/header.php';
   <div class="hero-visual">
     <div class="hero-word" aria-hidden="true">PROSPER</div>
     <div class="hero-photo-wrap"><img src="<?= e(asset_url('images/hero-live-strategy-workshop-v1.jpg')) ?>" fetchpriority="high" decoding="async" srcset="<?= e(responsive_srcset('hero-live-strategy-workshop-v1.jpg')) ?>" sizes="(max-width: 768px) 100vw, 768px" alt="Rajyogi Prabhu Zunja leading a live yoga business strategy workshop" width="1536" height="1024"></div>
-    <div class="mentor-card"><img src="<?= e(asset_url('images/founder-220.webp')) ?>" alt="Rajyogi Prabhu Zunja" width="220" height="246"><div><span>Your mentor</span><strong>Rajyogi<br>Prabhu Zunja</strong></div></div>
+    <div class="mentor-card"><img src="<?= e(asset_url('images/founder-112.webp')) ?>" alt="Rajyogi Prabhu Zunja" width="112" height="125"><div><span>Your mentor</span><strong>Rajyogi<br>Prabhu Zunja</strong></div></div>
     <div class="impact-card"><span>Community impact</span><strong>5,000+</strong><small>people empowered through yoga</small></div>
     <div class="orbit-badge"><span>Purpose</span><b>✦</b><span>Prosperity</span></div>
   </div>

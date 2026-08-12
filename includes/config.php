@@ -49,6 +49,7 @@ const SUPPORT_PHONE = '+91 77568 57108';
 const YOUTUBE_URL = 'https://www.youtube.com/@YogaProsperityModel';
 const INSTAGRAM_URL = 'https://www.instagram.com/prabhuzunja/';
 const THREADS_URL = 'https://www.threads.com/@prabhuzunja';
+const APPOINTMENT_URL = 'https://link.yatifunnels.com/widget/bookings/yogaprosperitymodel/appointment';
 
 function redirect_legacy_php_request(): void
 {
@@ -109,9 +110,11 @@ function responsive_srcset(string $filename): string
 {
     $extension = pathinfo($filename, PATHINFO_EXTENSION);
     $basename = substr($filename, 0, -(strlen($extension) + 1));
+    $fullWidth = $filename === 'trainer-live-coaching-v2.jpg' ? 1122 : 1536;
 
-    return asset_url('images/' . $basename . '-768.webp') . ' 768w, '
-        . asset_url('images/' . $basename . '.webp') . ' 1536w';
+    return asset_url('images/' . $basename . '-640.webp') . ' 640w, '
+        . asset_url('images/' . $basename . '-768.webp') . ' 768w, '
+        . asset_url('images/' . $basename . '.webp') . ' ' . $fullWidth . 'w';
 }
 
 function page_meta(array $overrides = []): array
