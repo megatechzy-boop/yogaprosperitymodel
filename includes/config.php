@@ -46,6 +46,9 @@ define('SITE_BASE_PATH', detect_site_base_path());
 define('SITE_URL', SITE_ORIGIN);
 const SUPPORT_EMAIL = 'support@yogaprosperitymodel.com';
 const SUPPORT_PHONE = '+91 77568 57108';
+const YOUTUBE_URL = 'https://www.youtube.com/@YogaProsperityModel';
+const INSTAGRAM_URL = 'https://www.instagram.com/prabhuzunja/';
+const THREADS_URL = 'https://www.threads.com/@prabhuzunja';
 
 function redirect_legacy_php_request(): void
 {
@@ -107,8 +110,8 @@ function responsive_srcset(string $filename): string
     $extension = pathinfo($filename, PATHINFO_EXTENSION);
     $basename = substr($filename, 0, -(strlen($extension) + 1));
 
-    return asset_url('images/' . $basename . '-768.' . $extension) . ' 768w, '
-        . asset_url('images/' . $filename) . ' 1536w';
+    return asset_url('images/' . $basename . '-768.webp') . ' 768w, '
+        . asset_url('images/' . $basename . '.webp') . ' 1536w';
 }
 
 function page_meta(array $overrides = []): array
@@ -158,6 +161,7 @@ function base_schema(): array
                 'telephone' => SUPPORT_PHONE,
                 'description' => 'Yoga business mentoring and professional development for yoga teachers in India.',
                 'founder' => ['@id' => SITE_URL . '/about/#prabhu-zunja'],
+                'sameAs' => [YOUTUBE_URL, INSTAGRAM_URL, THREADS_URL],
                 'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Pune', 'addressRegion' => 'Maharashtra', 'postalCode' => '412101', 'addressCountry' => 'IN'],
                 'areaServed' => ['@type' => 'Country', 'name' => 'India'],
                 'knowsAbout' => ['Yoga business coaching', 'Yoga teacher mentoring', 'Signature yoga programs', 'Ethical yoga marketing'],

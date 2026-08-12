@@ -1,8 +1,13 @@
   </main>
   <footer class="footer">
     <div>
-      <a class="brand footer-brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home"><img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-2026.png')) ?>" alt="" width="512" height="512"><span>Yoga <b>Prosperity Model</b></span></a>
+      <a class="brand footer-brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home"><img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-160.webp')) ?>" alt="" width="160" height="160"><span>Yoga <b>Prosperity Model</b></span></a>
       <p>Purpose-led business education for yoga teachers.</p>
+      <nav class="social-links" aria-label="Social media">
+        <a href="<?= e(YOUTUBE_URL) ?>" target="_blank" rel="noopener noreferrer" aria-label="Yoga Prosperity Model on YouTube">YouTube</a>
+        <a href="<?= e(INSTAGRAM_URL) ?>" target="_blank" rel="noopener noreferrer" aria-label="Prabhu Zunja on Instagram">Instagram</a>
+        <a href="<?= e(THREADS_URL) ?>" target="_blank" rel="noopener noreferrer" aria-label="Prabhu Zunja on Threads">Threads</a>
+      </nav>
     </div>
     <div><p class="footer-label">Explore</p><a href="<?= e(site_path('yoga-prosperity-method')) ?>">Our method</a><a href="<?= e(site_path('programs')) ?>">Programs</a><a href="<?= e(site_path('about')) ?>">About Prabhu</a><a href="<?= e(site_path('success-stories')) ?>">Success stories</a></div>
     <div><p class="footer-label">Information</p><a href="<?= e(site_path('privacy-policy')) ?>">Privacy policy</a><a href="<?= e(site_path('terms-and-conditions')) ?>">Terms & conditions</a><a href="<?= e(site_path('refund-policy')) ?>">Refund policy</a><a href="<?= e(site_path('pricing-policy')) ?>">Pricing policy</a></div>

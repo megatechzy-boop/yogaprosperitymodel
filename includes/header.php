@@ -48,11 +48,12 @@ $pageSchema = [
   <link rel="icon" type="image/png" sizes="512x512" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
   <link rel="shortcut icon" type="image/png" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
   <link rel="apple-touch-icon" href="<?= e(asset_url('images/ypm-logo-2026.png')) ?>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=3.4.0">
-  <link rel="stylesheet" href="<?= e(asset_url('css/leads.css')) ?>?v=3.2.0">
+  <link rel="preload" href="<?= e(asset_url('fonts/inter-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?= e(asset_url('fonts/fraunces-latin-normal.woff2')) ?>" as="font" type="font/woff2" crossorigin>
+  <?php if ($current === 'home'): ?>
+  <link rel="preload" as="image" href="<?= e(asset_url('images/hero-live-strategy-workshop-v1-768.webp')) ?>" imagesrcset="<?= e(responsive_srcset('hero-live-strategy-workshop-v1.jpg')) ?>" imagesizes="(max-width: 768px) 100vw, 768px" fetchpriority="high">
+  <?php endif; ?>
+  <link rel="stylesheet" href="<?= e(asset_url('css/style.css')) ?>?v=3.5.0">
   <?php foreach (array_merge([base_schema()], $current === 'home' ? [] : [$pageSchema], $structuredData ?? []) as $schema): ?>
   <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
   <?php endforeach; ?>
@@ -62,7 +63,7 @@ $pageSchema = [
   <div class="top-note"><span>For yoga teachers ready to build a purposeful, prosperous practice</span><a href="<?= e(site_path('contact')) ?>">Book a clarity conversation ↗</a></div>
   <header class="site-header">
     <a class="brand" href="<?= e(site_path()) ?>" aria-label="Yoga Prosperity Model home">
-      <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-2026.png')) ?>" alt="" width="512" height="512">
+      <img class="brand-logo" src="<?= e(asset_url('images/ypm-logo-160.webp')) ?>" alt="" width="160" height="160">
       <span>Yoga <b>Prosperity Model</b></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>

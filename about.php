@@ -6,6 +6,7 @@ $structuredData = [breadcrumb_schema([['Home', '/'], ['About', '/about/']]), [
     '@context' => 'https://schema.org', '@type' => 'Person', '@id' => SITE_URL . '/about/#prabhu-zunja',
     'name' => 'Prabhu Zunja', 'url' => SITE_URL . '/about/', 'image' => SITE_URL . '/assets/images/founder.png',
     'jobTitle' => 'Yoga Teacher and Business Mentor', 'worksFor' => ['@id' => SITE_URL . '/#organization'],
+    'sameAs' => [YOUTUBE_URL, INSTAGRAM_URL, THREADS_URL],
     'knowsAbout' => ['Patanjali Yoga', 'Yoga teaching', 'Yoga business mentoring', 'Online yoga programs'],
 ]];
 require __DIR__ . '/includes/header.php';

@@ -1,3 +1,7 @@
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url("../fonts/inter-latin.woff2") format("woff2")}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:400 500;font-display:swap;src:url("../fonts/fraunces-latin-normal.woff2") format("woff2")}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:400 500;font-display:swap;src:url("../fonts/fraunces-latin-italic.woff2") format("woff2")}
+
 /* ============================================================
    Yoga Prosperity Model — Design tokens
    Palette: warm porcelain paper, deep forest moss, muted brass
@@ -142,7 +146,7 @@ nav a:hover:after,nav a.active:after{right:0}
 .credentials{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14);margin-top:38px;padding-top:30px}
 .credentials div{display:flex;flex-direction:column;gap:6px}
 .credentials strong{font-family:"Fraunces";font-weight:400;font-size:30px;color:var(--gold-soft)}
-.credentials span{font-size:11px;color:#9CA79F;text-transform:uppercase;letter-spacing:.08em}
+.credentials span{font-size:11px;color:#BFC9C2;text-transform:uppercase;letter-spacing:.08em}
 
 /* ---------- Plans ---------- */
 .plans{background:var(--paper-alt)}
@@ -163,7 +167,7 @@ nav a:hover:after,nav a.active:after{right:0}
 .plan-card.dark h3,.plan-card.dark .price{color:#fff}
 .plan-card.dark .price small,.plan-card.dark ul{color:#C7CFC9}
 .plan-card.dark li:before{border-color:var(--gold-soft)}
-.plan-card.dark>p{color:#9CA79F}
+.plan-card.dark>p{color:#BFC9C2}
 .plan-card.dark a{color:#fff;border-color:rgba(255,255,255,.18)}
 .plan-note{font-size:12px;color:var(--ink-soft);margin-top:20px}
 
@@ -206,11 +210,11 @@ nav a:hover:after,nav a.active:after{right:0}
 /* ---------- Footer ---------- */
 .footer{background:var(--ink);color:#fff;padding:80px 4.5vw 32px;display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:7vw}
 .footer>div{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
-.footer p{color:#9CA39E;line-height:1.7;margin:0;font-size:14px}
+.footer p{color:#BDC7C0;line-height:1.7;margin:0;font-size:14px}
 .footer-label{color:#fff!important;text-transform:uppercase;font-size:11px;letter-spacing:.12em;font-weight:600;margin-bottom:8px!important}
 .footer a{font-size:14px;color:#C9CFC9}
 .footer a:hover{color:var(--gold-soft)}
-.footer-bottom{grid-column:1/-1!important;border-top:1px solid rgba(255,255,255,.12);margin-top:60px;padding-top:24px;display:flex!important;flex-direction:row!important;justify-content:space-between;color:#8A9089;font-size:12px;width:100%}
+.footer-bottom{grid-column:1/-1!important;border-top:1px solid rgba(255,255,255,.12);margin-top:60px;padding-top:24px;display:flex!important;flex-direction:row!important;justify-content:space-between;color:#B4BEB8;font-size:12px;width:100%}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee div{animation:none}}
 
@@ -396,12 +400,12 @@ nav a:hover:after,nav a.active:after{right:0}
   --white:#FFFDF8;
   --ink:#17251F;
   --ink-soft:#59675F;
-  --ink-faint:#869088;
+  --ink-faint:#59675F;
   --moss:#214D3C;
   --moss-deep:#102A21;
   --gold:#D99A54;
   --gold-soft:#F0C98C;
-  --terracotta:#C96548;
+  --terracotta:#A8472F;
   --line:rgba(23,37,31,.14);
   --shadow:0 24px 70px rgba(16,42,33,.12);
 }
@@ -749,11 +753,25 @@ nav a:after{bottom:24px;height:2px;background:var(--gold-soft)}
   padding:84px 5.5vw 32px;
 }
 .footer-brand{color:#fff}
+.social-links{display:flex;flex-wrap:wrap;gap:8px!important;margin-top:8px}
+.social-links a{padding:8px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:#F2F5F3;font-size:12px;line-height:1}
+.social-links a:hover,.social-links a:focus-visible{background:#fff;color:var(--moss-deep);border-color:#fff}
 .whatsapp-float{
   border-radius:999px!important;
   background:#1F9D62!important;
   box-shadow:0 16px 35px rgba(14,93,55,.28)!important;
 }
+
+/* Forms and floating contact action */
+.contact-form select{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:13px 0;font:inherit;outline:none;color:var(--ink)}
+.contact-form select:focus{border-color:var(--gold)}
+.contact-form .honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{grid-column:1/-1;margin:0;padding:14px 16px;background:var(--paper-alt);border-left:2px solid var(--ink-faint);font-size:13px;text-transform:none!important;letter-spacing:0!important;color:var(--ink-soft)}
+.form-status[data-state="pending"]{background:#F4EEDD;border-color:var(--gold);color:#6D5128}
+.form-status[data-state="success"]{background:#E7EEE7;border-color:var(--moss);color:var(--moss-deep)}
+.form-status[data-state="error"]{background:#F6E7E2;border-color:#A64B34;color:#6F2D1D}
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:80;color:#fff!important;padding:15px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(27,38,32,.22);font-size:13px;font-weight:600;letter-spacing:.01em}
+.whatsapp-float:hover{background:#155C39!important;transform:translateY(-2px)}
 
 .page-hero{background:linear-gradient(135deg,#F7F1E8 0%,#EFE1CF 100%)}
 .page-hero h1{letter-spacing:-.04em}
@@ -786,6 +804,8 @@ nav a:after{bottom:24px;height:2px;background:var(--gold-soft)}
   .site-header{height:76px;padding:0 18px}
   .site-header nav{top:76px}
   .site-header .brand-logo{width:54px;height:54px;flex-basis:54px}
+  .contact-form select,.form-status{grid-column:1}
+  .whatsapp-float{right:16px;bottom:16px;padding:14px 18px}
   .header-cta{padding:12px 15px}
   .hero,.hero-v2{padding:0 18px 18px}
   .hero-copy{padding:58px 0 52px}
