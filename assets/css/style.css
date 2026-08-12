@@ -307,12 +307,6 @@ nav a:hover:after,nav a.active:after{right:0}
 .contact-details{display:grid;gap:24px;margin-top:44px}
 .contact-details a{font-size:18px;font-weight:500;color:var(--ink)}
 .appointment-button{margin:26px 0 4px;border-radius:999px}
-.paid-appointment{margin-top:28px;padding:28px;border-radius:22px;background:var(--moss-deep);color:#fff;box-shadow:var(--shadow)}
-.paid-appointment .eyebrow{margin:0 0 10px;color:var(--gold-soft)}
-.paid-appointment h3{margin:0 0 12px;font-family:"Fraunces",Georgia,serif;font-size:28px;font-weight:400;line-height:1.15}
-.paid-appointment>p:not(.eyebrow){margin:0;color:#D8E0DB;line-height:1.7}
-.paid-appointment-button{margin:22px 0 10px;border-radius:999px;background:var(--terracotta);border-color:var(--terracotta)}
-.paid-appointment small{display:block;color:#B9C5BE;font-size:12px}
 .notice{background:var(--paper-alt);border-left:2px solid var(--gold);padding:18px 20px;margin:22px 0;color:var(--ink-soft)}
 
 /* ---------- Responsive ---------- */

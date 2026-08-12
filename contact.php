@@ -9,7 +9,6 @@ $meta = page_meta([
 $faqs = [
     ['How quickly will the Yoga Prosperity Model team respond?', 'The team aims to respond within one business day after receiving a complete enquiry.'],
     ['What happens during the 15-minute clarity call?', 'The conversation covers your current yoga work, goals and preferred level of support so the team can suggest a suitable next step without guaranteeing an outcome.'],
-    ['How do I book a paid one-to-one appointment?', 'Complete the payment using the booking button, then submit the Google Form that opens after payment and select your preferred call slot.'],
     ['Where is Yoga Prosperity Model based?', 'Yoga Prosperity Model is based in Ravet, Pune, Maharashtra, India, and its current learning and mentoring offers include online delivery.'],
 ];
 $structuredData = [breadcrumb_schema([['Home', '/'], ['Contact', '/contact/']]), faq_schema($faqs)];
@@ -38,13 +37,6 @@ require __DIR__ . '/includes/header.php';
     </div>
     <a class="button appointment-button" href="<?= e(APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Book your appointment <span>↗</span></a>
     <div class="notice">Share your details for a 15-minute clarity call. Our team will personally guide you to the right next step.</div>
-    <aside class="paid-appointment" aria-labelledby="paid-appointment-title">
-      <p class="eyebrow">Paid one-to-one appointment</p>
-      <h3 id="paid-appointment-title">Book a focused call with Prabhu.</h3>
-      <p>Click below to pay and book your one-to-one appointment. After payment, you will be directed to a Google Form. Please submit the form and select your preferred call slot.</p>
-      <a class="button paid-appointment-button" href="<?= e(PAID_APPOINTMENT_URL) ?>" target="_blank" rel="noopener noreferrer">Pay &amp; book your call <span>↗</span></a>
-      <small>Payment opens on Razorpay.</small>
-    </aside>
   </div>
   <form class="contact-form" data-lead-form action="<?= e(site_path('api/contact.php')) ?>" method="post" novalidate>
     <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
@@ -55,7 +47,6 @@ require __DIR__ . '/includes/header.php';
     <label>Program of interest
       <select name="program">
         <option value="Clarity call">15-minute clarity call</option>
-        <option value="Paid one-to-one appointment" <?= $program === 'Paid one-to-one appointment' ? 'selected' : '' ?>>Paid one-to-one appointment</option>
         <option value="Rajat Sangh" <?= $program === 'Rajat Sangh' ? 'selected' : '' ?>>Rajat Sangh</option>
         <option value="Vajra Sangh" <?= $program === 'Vajra Sangh' ? 'selected' : '' ?>>Vajra Sangh</option>
       </select>
