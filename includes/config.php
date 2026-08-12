@@ -32,7 +32,7 @@ function detect_site_base_path(): string
             return '';
         }
 
-        if (str_starts_with(strtolower($projectRoot), strtolower($documentPrefix))) {
+        if (stripos($projectRoot, $documentPrefix) === 0) {
             return '/' . trim(substr($projectRoot, strlen($documentRoot)), '/');
         }
     }
@@ -54,7 +54,7 @@ function redirect_legacy_php_request(): void
     }
 
     $requestPath = (string) parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
-    if ($requestPath === '' || str_contains($requestPath, '/api/')) {
+    if ($requestPath === '' || strpos($requestPath, '/api/') !== false) {
         return;
     }
 

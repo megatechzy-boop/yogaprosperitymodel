@@ -12,7 +12,7 @@ Open `http://127.0.0.1:8000/` in a browser.
 
 ## Production requirements
 
-- PHP 8.2 or later
+- PHP 7.4 or later (PHP 8.2+ recommended)
 - Apache with `mod_rewrite` enabled
 - HTTPS
 - The domain document root pointed at this directory
