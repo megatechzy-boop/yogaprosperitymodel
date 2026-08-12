@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/megatechzy/public_html/yogaprosperitymodel/
+    - export DEPLOYPATH=/home2/yogaprosperity/public_html/
     - /bin/cp -R * $DEPLOYPATH
     - /bin/cp .htaccess $DEPLOYPATH
