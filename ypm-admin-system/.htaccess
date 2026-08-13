@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /ypm-admin-system/
+
+# Pretty URL: /webinar/your-slug -> /landing.php?slug=your-slug
+RewriteRule ^webinar/([a-zA-Z0-9-]+)/?$ landing.php?slug=$1 [L,QSA]
+
+# Block direct access to config.php from the browser
+<Files "config.php">
+  Require all denied
+</Files>
