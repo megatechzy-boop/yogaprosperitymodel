@@ -290,6 +290,9 @@ nav a:hover:after,nav a.active:after{right:0}
 .answer-box{margin:34px 0;padding:26px 28px;border-left:4px solid var(--terracotta);border-radius:0 18px 18px 0;background:#fff;box-shadow:0 12px 30px rgba(16,42,33,.06)}
 .answer-box strong{display:block;margin-bottom:8px;color:var(--moss-deep);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 .answer-box p{margin:0}
+.related-links{display:grid;gap:10px;margin:20px 0 40px;padding-left:20px}
+.related-links a{color:var(--terracotta);font-weight:600}
+.feature-list article a{display:inline-block;margin-top:8px;color:var(--terracotta);font-weight:600;font-size:14px}
 .checklist{display:grid;gap:14px;margin:28px 0 48px;padding:0;list-style:none}
 .checklist li{position:relative;padding:18px 20px 18px 52px;border:1px solid var(--line);border-radius:16px;background:#fff}
 .checklist li::before{content:"✓";position:absolute;left:20px;top:17px;color:var(--terracotta);font-weight:700}

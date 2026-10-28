@@ -98,7 +98,13 @@ if (!headers_sent() && extension_loaded('zlib') && !in_array('ob_gzhandler', ob_
 
 function site_path(string $path = ''): string
 {
-    return SITE_BASE_PATH . '/' . ltrim($path, '/');
+    $path = ltrim($path, '/');
+    // Page URLs end with a slash to match canonicals and the sitemap; files keep their extension.
+    if ($path !== '' && substr($path, -1) !== '/' && pathinfo($path, PATHINFO_EXTENSION) === '') {
+        $path .= '/';
+    }
+
+    return SITE_BASE_PATH . '/' . $path;
 }
 
 function asset_url(string $path): string

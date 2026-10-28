@@ -3,6 +3,8 @@ require_once dirname(__DIR__) . '/includes/config.php';
 $program = [
     'name' => 'Vajra Sangh',
     'slug' => 'vajra-sangh',
+    'meta_title' => 'Vajra Sangh: Advanced Mentorship for Yoga Teachers',
+    'meta_description' => 'Deep 1:1-level mentorship for established teachers building a signature program, retreat or long-term yoga brand.',
     'level' => 'Mentorship at depth.',
     'price' => '₹99,999',
     'description' => 'The highest level of mentorship for established yoga teachers building a differentiated program, retreat or long-term body of work.',
@@ -25,6 +27,10 @@ $program = [
         ['Best fit', 'Teachers with an existing body of work who want deeper individual guidance.'],
     ],
     'features' => [['Rajat foundation', 'Build on the core learning and implementation support included in Rajat Sangh.'], ['One-to-one coaching', 'Receive focused support for your business, program and decisions.'], ['Retreat collaboration', 'Develop a purposeful retreat concept and experience.'], ['Certification pathway', 'Follow a longer-term three-year development and recognition path.']],
+    'guides' => [
+        ['package-yoga-signature-program', 'Package your yoga expertise into a signature program'],
+        ['premium-yoga-clients', 'Finding your first premium yoga clients'],
+    ],
     'faqs' => [
         ['What is included in Vajra Sangh?', 'Vajra Sangh combines the Rajat Sangh learning foundation with one-to-one coaching, retreat collaboration and a longer-term certification pathway.'],
         ['Who is Vajra Sangh for?', 'It is intended for established yoga teachers who want high-touch guidance while developing a differentiated program, retreat or long-term body of work.'],

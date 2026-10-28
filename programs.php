@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/config.php';
 $current = 'programs';
-$meta = page_meta(['title' => 'Yoga Teacher Business Programs | Yoga Prosperity Model', 'description' => 'Compare Rajat Sangh foundation learning and Vajra Sangh advanced mentorship for yoga teachers building sustainable programs and careers.', 'path' => '/programs/']);
+$meta = page_meta(['title' => 'Yoga Teacher Business Programs: Rajat & Vajra Sangh', 'description' => 'Compare our 1-year foundation program and advanced mentorship. Choose the right path to grow your yoga business.', 'path' => '/programs/']);
 $faqs = [
     ['Which Yoga Prosperity Model program should I choose?', 'Rajat Sangh is the foundation option for teachers learning business essentials through recorded lessons, weekly guidance and community. Vajra Sangh is for established teachers seeking deeper one-to-one mentorship and collaborative development.'],
     ['Are the yoga business programs online?', 'Both pathways include online learning or mentoring. Exact session timing, access and any collaborative in-person experience are confirmed before enrolment.'],

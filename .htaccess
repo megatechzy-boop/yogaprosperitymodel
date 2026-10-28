@@ -38,6 +38,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/suvarn-sangh(?:\.php)?/?$ programs/ [R=301,L]
 
+# Retired URL still requested by search engines.
+RewriteRule ^masterclass/?$ programs/ [R=301,L]
+
+# One URL per page: send slashless page URLs to the trailing-slash version used in canonicals and the sitemap.
+RewriteRule ^(about|yoga-prosperity-method|programs|programs/(?:rajat-sangh|vajra-sangh)|success-stories|resources|resources/(?:start-online-yoga-business-india|choose-profitable-yoga-niche|package-yoga-signature-program|yoga-teacher-pricing|ethical-yoga-marketing|premium-yoga-clients)|contact|privacy-policy|terms-and-conditions|refund-policy|pricing-policy)$ %{REQUEST_URI}/ [R=301,L]
+
 RewriteRule ^index/?$ index.php [L]
 RewriteRule ^about/?$ about.php [L]
 RewriteRule ^yoga-prosperity-method/?$ yoga-prosperity-method.php [L]

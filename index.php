@@ -2,8 +2,8 @@
 require_once __DIR__ . '/includes/config.php';
 $current = 'home';
 $meta = page_meta([
-    'title' => 'Yoga Business Coaching for Teachers | Yoga Prosperity Model',
-    'description' => 'Turn your yoga expertise into a trusted, sustainable practice with mentorship, business strategy and the Yoga Gurus Sangh community.',
+    'title' => 'Yoga Business Coaching for Yoga Teachers in India | YPM',
+    'description' => 'Grow your online yoga business with mentorship on niche, signature programs, pricing and ethical marketing. Guided by Prabhu Zunja.',
 ]);
 $structuredData = [[
     '@context' => 'https://schema.org',
@@ -48,8 +48,8 @@ require __DIR__ . '/includes/header.php';
   <div class="section-heading"><div><p class="eyebrow">A practical path forward</p><h2>Ancient wisdom.<br><em>Modern strategy.</em></h2></div></div>
   <p class="section-lede">We help yoga teachers build meaningful careers without compromising the values that brought them to yoga in the first place.</p>
   <div class="method-grid">
-<article><span>01</span><h3>Find your niche</h3><p>Clarify who you serve, the transformation you create and why your approach matters.</p><a href="<?= e(site_path('yoga-prosperity-method')) ?>">Build your positioning ↗</a></article>
-<article><span>02</span><h3>Package your wisdom</h3><p>Turn your experience into a focused signature program with a confident price and promise.</p><a href="<?= e(site_path('yoga-prosperity-method')) ?>">Shape your program ↗</a></article>
+<article><span>01</span><h3>Find your niche</h3><p>Clarify who you serve, the transformation you create and why your approach matters.</p><a href="<?= e(site_path('resources/choose-profitable-yoga-niche')) ?>">Build your positioning ↗</a></article>
+<article><span>02</span><h3>Package your wisdom</h3><p>Turn your experience into a focused signature program with a confident price and promise.</p><a href="<?= e(site_path('resources/package-yoga-signature-program')) ?>">Shape your program ↗</a></article>
 <article><span>03</span><h3>Grow with systems</h3><p>Learn simple marketing, sales and delivery systems that support steady, sustainable growth.</p><a href="<?= e(site_path('yoga-prosperity-method')) ?>">Start growing ↗</a></article>
   </div>
 </section>

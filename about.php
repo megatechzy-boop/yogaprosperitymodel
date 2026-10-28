@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/config.php';
 $current = 'about';
-$meta = page_meta(['title' => 'About Prabhu Zunja | Yoga Business Mentor', 'description' => 'Meet Rajyogi Prabhu Zunja, founder of Yoga Prosperity Model and mentor to yoga teachers building purpose-led careers.', 'path' => '/about/']);
+$meta = page_meta(['title' => 'Prabhu Zunja – Yoga Business Mentor & Founder of YPM', 'description' => 'Meet Rajyogi Prabhu Zunja, who mentors yoga teachers to build purpose-led, sustainable yoga businesses.', 'path' => '/about/']);
 $structuredData = [breadcrumb_schema([['Home', '/'], ['About', '/about/']]), [
     '@context' => 'https://schema.org', '@type' => 'Person', '@id' => SITE_URL . '/about/#prabhu-zunja',
     'name' => 'Prabhu Zunja', 'url' => SITE_URL . '/about/', 'image' => SITE_URL . '/assets/images/founder.png',

@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/includes/config.php';
-$meta = page_meta(['title' => 'Yoga Teacher Success Stories | Yoga Prosperity Model', 'description' => 'Read stories from yoga teachers who gained clarity, confidence and stronger positioning through Yoga Prosperity Model.', 'path' => '/success-stories/']);
+$meta = page_meta(['title' => 'Yoga Teacher Success Stories: Real Business Results', 'description' => 'See how yoga teachers across India gained clarity, confident pricing and steady students with the Yoga Prosperity Model.', 'path' => '/success-stories/']);
 $structuredData = [breadcrumb_schema([['Home', '/'], ['Success Stories', '/success-stories/']])];
 require __DIR__ . '/includes/header.php';
 ?>

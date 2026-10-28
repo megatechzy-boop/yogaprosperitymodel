@@ -6,8 +6,11 @@ $articles = [
     'start-online-yoga-business-india' => [
         'category' => 'Yoga business',
         'title' => 'How to start an online yoga business in India',
-        'meta_title' => 'Start an Online Yoga Business in India | YPM',
+        'meta_title' => 'How to Start an Online Yoga Business in India (2026 Guide)',
         'description' => 'A practical path from choosing a focused audience to delivering your first structured online yoga program.',
+        'meta_description' => 'Step-by-step: niche, offer, pricing, platform and first students. A practical starting plan for Indian yoga teachers.',
+        'related' => ['choose-profitable-yoga-niche', 'yoga-teacher-pricing', 'package-yoga-signature-program'],
+        'program' => 'rajat-sangh',
         'intro' => 'An online yoga business becomes easier to build when you begin with one clear audience, one meaningful outcome and one simple way to deliver it.',
         'quick_answer' => 'To start an online yoga business in India, choose one audience, define one responsible outcome, package it into a short pilot program, select simple delivery and payment tools, and enrol the first learners through trusted conversations. Validate the offer before investing in complex technology or advertising.',
         'checklist' => ['A defined learner group and problem', 'A four-to-eight week pilot with a clear scope', 'A reliable live-video, communication and payment setup', 'Written schedule, inclusions, boundaries and refund terms', 'A feedback process for improving the next cohort'],
@@ -25,9 +28,12 @@ $articles = [
     ],
     'choose-profitable-yoga-niche' => [
         'category' => 'Positioning',
-        'title' => 'How to choose a profitable yoga niche',
-        'meta_title' => 'How to Choose a Profitable Yoga Niche | YPM',
+        'title' => 'How to find your yoga niche (and make it profitable)',
+        'meta_title' => 'How to Find Your Yoga Niche (Profitable Niche Ideas)',
         'description' => 'Find the overlap between your experience, the people you understand and a problem they actively want to solve.',
+        'meta_description' => 'Find your yoga niche by matching your experience, the people you understand and a problem they want solved.',
+        'related' => ['package-yoga-signature-program', 'start-online-yoga-business-india'],
+        'program' => 'rajat-sangh',
         'intro' => 'A useful niche is not simply a yoga style. It connects your strengths with a recognisable person, situation and desired transformation.',
         'quick_answer' => 'Choose a yoga niche by combining three things: people you understand, a need they actively recognise and an outcome you can support within your training. Interview potential learners, test a small workshop and use actual questions and enrolment behaviour—not trends alone—to decide.',
         'checklist' => ['Name one recognisable audience', 'Describe a specific situation or need', 'Confirm that the outcome fits your professional scope', 'Speak with at least a small set of potential learners', 'Test the message through a workshop or pilot'],
@@ -46,8 +52,11 @@ $articles = [
     'package-yoga-signature-program' => [
         'category' => 'Programs',
         'title' => 'Package your yoga expertise into a signature program',
-        'meta_title' => 'Create a Signature Yoga Program | YPM',
+        'meta_title' => 'How to Create a Signature Yoga Program (Step-by-Step)',
         'description' => 'Turn individual sessions into a structured learning journey with a clear promise, sequence and participant experience.',
+        'meta_description' => 'Turn single classes into a structured program with a clear promise, curriculum and higher fees.',
+        'related' => ['yoga-teacher-pricing', 'premium-yoga-clients'],
+        'program' => 'vajra-sangh',
         'intro' => 'A signature program gives your teaching a repeatable structure while leaving room to respond to the people in front of you.',
         'quick_answer' => 'Package yoga expertise into a signature program by defining the learner, starting point, responsible outcome, learning stages, delivery format and support level. Give every module a purpose and run a small cohort before treating the program as final.',
         'checklist' => ['One clearly described participant profile', 'A responsible and observable program outcome', 'A sequence of modules or practice stages', 'Defined live, recorded and support elements', 'Onboarding, feedback and completion steps'],
@@ -66,8 +75,11 @@ $articles = [
     'yoga-teacher-pricing' => [
         'category' => 'Pricing',
         'title' => 'How much should a yoga teacher charge?',
-        'meta_title' => 'Yoga Teacher Pricing Guide | YPM',
+        'meta_title' => 'How Much Should a Yoga Teacher Charge in India?',
         'description' => 'Price your work according to delivery, support, preparation and value—not only the minutes spent teaching live.',
+        'meta_description' => 'Price your classes, programs and 1:1 sessions based on value and delivery, not just minutes taught.',
+        'related' => ['package-yoga-signature-program', 'premium-yoga-clients'],
+        'program' => 'rajat-sangh',
         'intro' => 'There is no single correct price for every yoga teacher. A responsible price reflects the complete participant experience and the real cost of delivering it well.',
         'quick_answer' => 'A yoga teacher should price a program by calculating preparation, delivery, support, technology, venue, payment fees and applicable taxes, then comparing the scope and format with realistic market alternatives. The final price must be sustainable for the teacher and transparent to the learner.',
         'checklist' => ['Calculate every delivery and support cost', 'Define exactly what the participant receives', 'Compare like-for-like local and online alternatives', 'Publish payment, cancellation and refund terms', 'Review effort, enrolment and completion after each cohort'],
@@ -86,8 +98,11 @@ $articles = [
     'ethical-yoga-marketing' => [
         'category' => 'Marketing',
         'title' => 'Ethical marketing for yoga teachers',
-        'meta_title' => 'Ethical Marketing for Yoga Teachers | YPM',
+        'meta_title' => 'Ethical Yoga Marketing: Get Students Without Hype',
         'description' => 'Communicate your work with clarity and confidence without fear-based claims, pressure or unrealistic promises.',
+        'meta_description' => 'Market your yoga classes with clarity and trust, without fear-based claims or pushy sales.',
+        'related' => ['premium-yoga-clients', 'start-online-yoga-business-india'],
+        'program' => 'rajat-sangh',
         'intro' => 'Marketing can be an extension of service when it helps the right people understand a genuine problem, a responsible process and a suitable next step.',
         'quick_answer' => 'Ethical yoga marketing explains who an offer is for, what the process includes, what progress may reasonably look like and where its limits are. It avoids guaranteed health, income or spiritual claims, respects privacy and gives people enough information to decide without pressure.',
         'checklist' => ['Use specific, non-guaranteed outcome language', 'Explain the method, duration and support clearly', 'Obtain permission for every testimonial and image', 'Disclose prices, important conditions and limitations', 'Use invitations and follow-up without pressure'],
@@ -106,8 +121,11 @@ $articles = [
     'premium-yoga-clients' => [
         'category' => 'Clients',
         'title' => 'Finding your first premium yoga clients',
-        'meta_title' => 'Find Premium Yoga Clients Responsibly | YPM',
+        'meta_title' => 'How to Get Premium Yoga Clients (Without Pushy Sales)',
         'description' => 'Build trust, start better conversations and offer deeper support to people who value a focused transformation.',
+        'meta_description' => 'Attract students who value deep transformation through trust-building and better sales conversations.',
+        'related' => ['ethical-yoga-marketing', 'yoga-teacher-pricing'],
+        'program' => 'vajra-sangh',
         'intro' => 'Premium does not mean expensive for its own sake. It means a more focused outcome, thoughtful delivery and an appropriate level of support.',
         'quick_answer' => 'Find your first premium yoga clients by making the offer specific, starting with trusted relationships, using a structured clarity conversation and delivering a strong pilot experience. Premium positioning comes from relevance, depth and support—not pressure or a high price alone.',
         'checklist' => ['A clearly defined audience and outcome', 'A documented format, duration and support level', 'A respectful clarity-call question flow', 'Transparent price, boundaries and policies', 'A strong onboarding and feedback experience'],
@@ -131,7 +149,7 @@ if ($slug !== '' && isset($articles[$slug])) {
     $article = $articles[$slug];
     $meta = page_meta([
         'title' => $article['meta_title'],
-        'description' => $article['description'],
+        'description' => $article['meta_description'],
         'path' => '/resources/' . $slug . '/',
     ]);
     $faqEntities = array_map(static fn(array $faq): array => [
@@ -158,10 +176,11 @@ if ($slug !== '' && isset($articles[$slug])) {
         ],
         ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $faqEntities],
     ];
+    $programNames = ['rajat-sangh' => 'Rajat Sangh', 'vajra-sangh' => 'Vajra Sangh'];
     require __DIR__ . '/includes/header.php';
     ?>
     <section class="page-hero page-hero-visual"><div><p class="breadcrumbs"><a href="<?= e(site_path()) ?>">Home</a> / <a href="<?= e(site_path('resources')) ?>">Resources</a> / <?= e($article['category']) ?></p><h1><?= e($article['title']) ?></h1></div><p><?= e($article['description']) ?></p><div class="page-hero-image focus-right"><img src="<?= e(asset_url('images/trainer-business-planning-v1.jpg')) ?>" fetchpriority="high" decoding="async" srcset="<?= e(responsive_srcset('trainer-business-planning-v1.jpg')) ?>" sizes="(max-width: 768px) 100vw, 768px" alt="Prabhu Zunja developing a practical yoga business strategy" width="1536" height="1024"><span><?= e($article['category']) ?> guide</span></div></section>
-    <section class="content-section"><article class="prose resource-article"><p class="eyebrow">Practical guide</p><p class="article-meta">Written by <a href="<?= e(site_path('about')) ?>">Prabhu Zunja</a> · Published 11 August 2026 · Updated 11 August 2026</p><p class="resource-intro"><?= e($article['intro']) ?></p><div class="answer-box"><strong>Quick answer</strong><p><?= e($article['quick_answer']) ?></p></div><?php foreach ($article['sections'] as $section): ?><h2><?= e($section[0]) ?></h2><?php foreach ($section[1] as $paragraph): ?><p><?= e($paragraph) ?></p><?php endforeach; ?><?php endforeach; ?><h2>Practical checklist</h2><ul class="checklist"><?php foreach ($article['checklist'] as $item): ?><li><?= e($item) ?></li><?php endforeach; ?></ul><h2>Frequently asked questions</h2><div class="inline-faq"><?php foreach ($article['faqs'] as $faq): ?><details><summary><?= e($faq[0]) ?><span>+</span></summary><p><?= e($faq[1]) ?></p></details><?php endforeach; ?></div><div class="notice">Use these ideas as a practical starting point and adapt them to your training, professional scope and participants.</div><a class="button primary" href="<?= e(site_path('contact')) ?>?message=<?= rawurlencode('I would like guidance on ' . $article['title']) ?>">Discuss this with a mentor <span>→</span></a></article></section>
+    <section class="content-section"><article class="prose resource-article"><p class="eyebrow">Practical guide</p><p class="article-meta">Written by <a href="<?= e(site_path('about')) ?>">Prabhu Zunja</a> · Published 11 August 2026 · Updated 11 August 2026</p><p class="resource-intro"><?= e($article['intro']) ?></p><div class="answer-box"><strong>Quick answer</strong><p><?= e($article['quick_answer']) ?></p></div><?php foreach ($article['sections'] as $section): ?><h2><?= e($section[0]) ?></h2><?php foreach ($section[1] as $paragraph): ?><p><?= e($paragraph) ?></p><?php endforeach; ?><?php endforeach; ?><h2>Practical checklist</h2><ul class="checklist"><?php foreach ($article['checklist'] as $item): ?><li><?= e($item) ?></li><?php endforeach; ?></ul><h2>Frequently asked questions</h2><div class="inline-faq"><?php foreach ($article['faqs'] as $faq): ?><details><summary><?= e($faq[0]) ?><span>+</span></summary><p><?= e($faq[1]) ?></p></details><?php endforeach; ?></div><h2>Keep reading</h2><ul class="related-links"><?php foreach ($article['related'] as $relatedSlug): ?><li><a href="<?= e(site_path('resources/' . $relatedSlug)) ?>"><?= e($articles[$relatedSlug]['title']) ?></a></li><?php endforeach; ?><li><a href="<?= e(site_path('yoga-prosperity-method')) ?>">The Yoga Prosperity Method framework</a></li><li><a href="<?= e(site_path('programs/' . $article['program'])) ?>">Implement this with <?= e($programNames[$article['program']]) ?></a></li></ul><div class="notice">Use these ideas as a practical starting point and adapt them to your training, professional scope and participants.</div><a class="button primary" href="<?= e(site_path('contact')) ?>?message=<?= rawurlencode('I would like guidance on ' . $article['title']) ?>">Discuss this with a mentor <span>→</span></a></article></section>
     <?php
     require __DIR__ . '/includes/footer.php';
     return;
@@ -173,8 +192,8 @@ if ($slug !== '') {
 }
 
 $meta = page_meta([
-    'title' => 'Yoga Business Resources for Teachers | Yoga Prosperity Model',
-    'description' => 'Practical resources on yoga business, client attraction, signature programs, pricing and online yoga teaching.',
+    'title' => 'Yoga Business Blog: Free Guides for Yoga Teachers',
+    'description' => 'Practical guides on starting, pricing and marketing your online yoga business in India.',
     'path' => '/resources/',
 ]);
 $structuredData = [breadcrumb_schema([['Home', '/'], ['Resources', '/resources/']])];

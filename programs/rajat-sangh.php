@@ -3,6 +3,8 @@ require_once dirname(__DIR__) . '/includes/config.php';
 $program = [
     'name' => 'Rajat Sangh',
     'slug' => 'rajat-sangh',
+    'meta_title' => 'Rajat Sangh: 1-Year Yoga Business Program for Teachers',
+    'meta_description' => 'Clarify your offer, set your pricing and start getting online students, with community support for one full year.',
     'level' => 'Build the foundation.',
     'price' => '₹6,999',
     'description' => 'A guided one-year foundation for yoga teachers ready to clarify their offer, learn the business essentials and implement with community support.',
@@ -25,6 +27,10 @@ $program = [
         ['Best fit', 'Teachers who are beginning or rebuilding the business side of their yoga practice.'],
     ],
     'features' => [['12 recorded lecture courses', 'Learn at your pace through recorded lessons on positioning, program design, marketing and enrolment.'], ['30-day hackathon', 'Move from ideas to implementation through focused challenges.'], ['Weekly Q&A', 'Bring questions, remove blockers and keep making progress.'], ['Accountability community', 'Learn alongside yoga teachers committed to responsible growth.']],
+    'guides' => [
+        ['start-online-yoga-business-india', 'How to start an online yoga business in India'],
+        ['yoga-teacher-pricing', 'How much should a yoga teacher charge?'],
+    ],
     'faqs' => [
         ['What do I receive in Rajat Sangh?', 'Rajat Sangh includes 12 recorded lecture courses, a 30-day implementation hackathon, weekly online question-and-answer guidance and an accountability community.'],
         ['Are the Rajat Sangh lessons recorded?', 'Yes. The main learning library is recorded so members can study at their own pace. Weekly guidance and community support help turn the lessons into action.'],
