@@ -1,57 +1,170 @@
 Options -Indexes
 DirectoryIndex index.php
+
 RewriteEngine On
 
-# Compression and long-lived caching for versioned static assets.
+# ==================================================
+# CUSTOM ERROR PAGES
+# ==================================================
+RewriteRule ^400/?$ 400.php [L]
+RewriteRule ^403/?$ 403.php [L]
+RewriteRule ^404/?$ 404.php [L]
+RewriteRule ^405/?$ 405.php [L]
+RewriteRule ^429/?$ 429.php [L]
+RewriteRule ^500/?$ 500.php [L]
+
+
+# ==================================================
+# SITEMAP & ROBOTS
+# Serve these files directly without URL rewriting
+# ==================================================
+RewriteRule ^sitemap\.xml$ - [L]
+RewriteRule ^robots\.txt$ - [L]
+
+
+# ==================================================
+# COMPRESSION
+# ==================================================
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/ld+json application/xml image/svg+xml
-</IfModule>
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/avif "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType text/html "access plus 10 minutes"
-</IfModule>
-<IfModule mod_headers.c>
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-  <FilesMatch "\.(?:css|js|jpg|jpeg|png|gif|webp|avif|svg|woff2)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ld+json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Never expose locally stored lead data from the public website.
+
+# ==================================================
+# BROWSER CACHING
+# ==================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+
+    ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+
+
+# ==================================================
+# SECURITY HEADERS
+# ==================================================
+<IfModule mod_headers.c>
+
+    Header always set X-Content-Type-Options "nosniff"
+
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+    <FilesMatch "\.(?:css|js|jpg|jpeg|png|gif|webp|avif|svg|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+</IfModule>
+
+
+# ==================================================
+# PROTECT STORAGE DIRECTORY
+# ==================================================
 RewriteRule ^storage(?:/|$) - [F,L,NC]
 
+
+# ==================================================
+# FORCE HTTPS
+# ==================================================
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+
+# ==================================================
+# REDIRECT OLD URL
+# ==================================================
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^programs/suvarn-sangh(?:\.php)?/?$ programs/ [R=301,L]
 
+
+# ==================================================
+# MAIN PAGES
+# ==================================================
 RewriteRule ^index/?$ index.php [L]
 RewriteRule ^about/?$ about.php [L]
 RewriteRule ^yoga-prosperity-method/?$ yoga-prosperity-method.php [L]
 RewriteRule ^programs/?$ programs.php [L]
+
+
+# ==================================================
+# PROGRAMS
+# ==================================================
 RewriteRule ^programs/(rajat-sangh|suvarn-sangh|vajra-sangh)/?$ programs/$1.php [L]
+
+
+# ==================================================
+# SUCCESS STORIES
+# ==================================================
 RewriteRule ^success-stories/?$ success-stories.php [L]
+
+
+# ==================================================
+# RESOURCES / BLOG
+# ==================================================
 RewriteRule ^resources/(start-online-yoga-business-india|choose-profitable-yoga-niche|package-yoga-signature-program|yoga-teacher-pricing|ethical-yoga-marketing|premium-yoga-clients)/?$ blog.php?article=$1 [QSA,L]
+
 RewriteRule ^resources/?$ blog.php [L]
+
+
+# ==================================================
+# CONTACT
+# ==================================================
 RewriteRule ^contact/?$ contact.php [L]
+
+
+# ==================================================
+# LEGAL PAGES
+# ==================================================
 RewriteRule ^privacy-policy/?$ privacy-policy.php [L]
 RewriteRule ^terms-and-conditions/?$ terms.php [L]
 RewriteRule ^refund-policy/?$ refund-policy.php [L]
 RewriteRule ^pricing-policy/?$ pricing-policy.php [L]
 
+
+# ==================================================
+# CUSTOM 404
+# ==================================================
+# Anything that is not a real file or directory
+# returns a genuine HTTP 404 status.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ 404.php [L]
+
+
+# ==================================================
+# SENSITIVE FILE PROBE GUARD
+# ==================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(?:\.env(?:\..*)?|\.git(?:/.*)?|\.hg(?:/.*)?|\.svn(?:/.*)?|\.bzr(?:/.*)?|\.kube(?:/.*)?|\.aws(?:/.*)?|(?:compose|docker-compose|serverless|vercel|netlify|bitbucket-pipelines|azure-pipelines)(?:\..*)?|Jenkinsfile|\.travis(?:\..*)?|\.drone(?:\..*)?|(?:terraform(?:\.tfstate|\.tfvars)?|terraform\.tfstate\.backup)(?:\..*)?|(?:secrets|credentials|client_secrets|parameters)(?:[._-].*)?\.(?:json|ya?ml|yaml|toml|yml|env|key)|(?:actuator|api/actuator)(?:/.*)?|(?:php_info|info)\.php|config/(?:master\.key|parameters\.ya?ml)|api/v1/namespaces/[^/]+/secrets|wp-admin/install\.php)$ - [F,L,NC]
+</IfModule>
+
+
+# ==================================================
+# PRIVATE LEAD STORAGE (HestiaCP, outside public_html)
+# ==================================================
+<IfModule mod_env.c>
+    SetEnv YPM_LEAD_STORAGE_DIR /home/megavtech/web/yogaprosperitymodel.com/private/ypm-private-data
+</IfModule>
